@@ -7,7 +7,6 @@ mysql> create table BankBranch
     ->        branch_city VARCHAR(20) not null,
     ->        assets INT not null
     -> );
-ERROR 1050 (42S01): Table 'bankbranch' already exists
 mysql>
 mysql> create table Customer
     -> (
@@ -53,7 +52,7 @@ mysql> create table Employee
 mysql> insert into BankBranch values('Midrand','Johannesburg',7100000);
 
 mysql> insert into BankBranch values('Newtown','Johannesburg',9000000);
-'
+
 mysql> insert into BankBranch values('Mabopane', 'Pretoria',400000);
 
 mysql> insert into BankBranch values('Belgravia','Kimberly',3700000);
@@ -141,7 +140,6 @@ mysql> insert into Borrower values('Johnson','L-15');
 mysql> insert into Borrower values('Jackson','L-14');
 
 mysql> insert into Borrower values('Zwane','L-17');
-Query OK, 1 row affected (0.00 sec)
 
 mysql> insert into Borrower values('Smith','L-11');
 
@@ -158,7 +156,6 @@ mysql> insert into Employee values('Gopal','Sunnyside',5300);
 mysql> insert into Employee values('Johnson','Newtown',1500);
 
 mysql> insert into Employee values('Loreena','Newtown',1300);
-Query OK, 1 row affected (0.01 sec)
 
 mysql> insert into Employee values('Peterson','Newtown',2500);
 
@@ -205,7 +202,6 @@ mysql> SELECT employee_name, branch_name,salary
 | Brown         | Sunnyside   |   1300 |
 | Brown         | Sunnyside   |   1300 |
 +---------------+-------------+--------+
-4 rows in set (0.00 sec)
 
 mysql>
 mysql> SELECT employee_name, branch_name, AVG(salary) AS avg_salary
